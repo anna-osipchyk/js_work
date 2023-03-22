@@ -5,6 +5,6 @@
 
     `node task_1/server.js` or `node task_1/expressServer.js`
 * ## How to test
-    `npm start`
+    `npm run start_express_server`
 
     `npm test`
