@@ -5,7 +5,7 @@ chai.use(chaiHttp);
 const host = "http://127.0.0.1:3000";
 
 describe("Test the functionality of Express node js server", () => {
-  it("GET users with type == 'manager'", () => {
+  it("GET users with type === 'manager'", () => {
     chai
       .request(host)
       .get("/users/")

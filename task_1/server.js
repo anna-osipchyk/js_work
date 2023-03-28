@@ -2,7 +2,7 @@
 const USERS = require("./users.json");
 const http = require("http");
 const url = require("url");
-const getUsers = require("./utils.js");
+const getUsers = require("./controllers.js");
 const hostname = "127.0.0.1";
 const port = 3000;
 const users = [...USERS];
@@ -20,7 +20,7 @@ const server = http.createServer((request, response) => {
       try {
         let resp = getUsers(requestUrl.query, users);
 
-        if (resp.length == 0) {
+        if (resp.length === 0) {
           sendResponse(
             "User data does not match the search and filter criteria",
             404
@@ -36,5 +36,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, hostname, () =>
-  console.log("Server is running on port " + port + " and host " + hostname)
+  console.log(`Server is running on port ${port} and host ${hostname}`)
 );

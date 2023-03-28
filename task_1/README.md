@@ -3,8 +3,8 @@
 * ## How to run:
     `npm -i`
 
-    `node task_1/server.js` or `node task_1/expressServer.js`
+    `npm run start_server` or `npm run start_express_server`
 * ## How to test
     `npm run start_express_server`
 
-    `npm test`
+    `npm test` expressServer.spec.js

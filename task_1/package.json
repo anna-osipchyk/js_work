@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start_server": "node task_1/server.js",
-    "start_express_server": "node task_1/expressServer.js",
+    "start_server": "node server.js",
+    "start_express_server": "node expressServer.js",
     "test": "mocha --timeout 100000"
   },
   "author": "",
