@@ -34,3 +34,4 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 /task_2/test-nest-server/.env
+/task_2/test-nest-server/node_modules/
