@@ -21,8 +21,9 @@ export class UserService {
     if (query.maxAge) clause['age'] = { [Op.lte]: [query.maxAge] };
     const users = await this.userDB.findAll({
       where: clause,
+      limit: query.limit || 10,
     });
 
-    return users.slice(0, query.limit);
+    return users;
   }
 }

@@ -17,17 +17,13 @@ export class UserController {
   constructor(private userService: UserService) {}
 
   @Post()
-  create(@Body(new ValidationPipe()) dto: UserCreateDto) {
+  create(@Body() dto: UserCreateDto) {
     return this.userService.createUser(dto);
   }
 
   @Get('')
   async getByParams(
-    @Query(
-      new ValidationPipe({
-        transform: true,
-      }),
-    )
+    @Query()
     query: UserGetDto,
   ) {
     const users = await this.userService.getUsersByParams(query);
